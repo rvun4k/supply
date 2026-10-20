@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".evershop",
+  "installCommand": "npm install",
+  "framework": null,
+  "builds": [
+    {
+      "src": "node_modules/@evershop/evershop/bin/evershop.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "node_modules/@evershop/evershop/bin/evershop.js"
+    }
+  ]
+}
